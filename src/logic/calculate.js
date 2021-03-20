@@ -1,7 +1,8 @@
-import operate from "./operate";
+/* eslint-disable consistent-return */
+import operate from './operate';
 
-const calculate = ({ data, buttonName}) => {
-  const {total, next, operation } = data;
+const calculate = ({ data, buttonName }) => {
+  let { total, next, operation } = data;
 
   switch (buttonName) {
     case 'AC':
@@ -10,11 +11,11 @@ const calculate = ({ data, buttonName}) => {
       operation = null;
       break;
     case '+/-':
-      if(next) next *= -1;
+      if (next) next *= -1;
       else total *= -1;
       break;
     case '%':
-      if(!next) total /= 100;
+      if (!next) total /= 100;
       else next /= 100;
       break;
     case '0':
@@ -34,30 +35,30 @@ const calculate = ({ data, buttonName}) => {
           total = buttonName;
         } else {
           total += buttonName;
-        };
+        }
       } else if (!next) {
         next = buttonName;
       } else {
         next += buttonName;
-      };
+      }
       break;
 
     case '.':
-      if(!total) total = '0.';
-      if(!operation && !total.includes('.')) {
+      if (!total) total = '0.';
+      if (!operation && !total.includes('.')) {
         total += '.';
-      } else if(!operation && !next.includes('.')) {
+      } else if (!operation && !next.includes('.')) {
         next += '.';
-      };
+      }
       break;
 
     case '+':
     case '-':
     case 'x':
     case '/':
-      if(!total) total = 0;
-      if(total, next, operation) {
-        total = operatee(total, next, operation);
+      if (!total) total = 0;
+      if (total && next && operation) {
+        total = operate(total, next, operation);
         next = null;
         operation = null;
       }
@@ -65,14 +66,14 @@ const calculate = ({ data, buttonName}) => {
       break;
 
     case '=':
-      if(!total, !next) return 0;
-      if(total, !next) return 0;
-      if(!operation) operate(total, next, operation);
-      if(total, next) {
+      if (!total && !next) return 0;
+      if (total && !next) return 0;
+      if (!operation) operate(total, next, operation);
+      if (total && next) {
         operate(total, next, operation);
         next = null;
         operation = buttonName;
-      };
+      }
       break;
 
     default:
@@ -81,6 +82,6 @@ const calculate = ({ data, buttonName}) => {
       operation = null;
       break;
   }
-}
+};
 
 export default calculate;
