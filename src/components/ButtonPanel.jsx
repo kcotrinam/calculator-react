@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
 const BUTTONGROUP = {
@@ -9,11 +10,14 @@ const BUTTONGROUP = {
   group5: ['0', '.', '=', '+'],
 };
 
-const ButtonPanel = () => {
+const ButtonPanel = ({ clickHandler }) => {
+  const handleClick = name => clickHandler(name);
+
   const renderButtons = group => group.map(name => (
     <Button
       key={name}
       name={name}
+      handleClick={handleClick}
     />
   ));
 
@@ -38,4 +42,5 @@ const ButtonPanel = () => {
   );
 };
 
+ButtonPanel.propTypes = { clickHandler: PropTypes.func.isRequired };
 export default ButtonPanel;
