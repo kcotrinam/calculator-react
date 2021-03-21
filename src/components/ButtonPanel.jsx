@@ -11,13 +11,15 @@ const BUTTONGROUP = {
 };
 
 const ButtonPanel = ({ clickHandler }) => {
-  const handleClick = name => clickHandler(name);
+  const handleClick1 = name => {
+    clickHandler(name);
+  };
 
   const renderButtons = group => group.map(name => (
     <Button
       key={name}
       name={name}
-      handleClick={handleClick}
+      handlerClick={handleClick1}
     />
   ));
 
