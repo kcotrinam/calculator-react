@@ -6,7 +6,7 @@ const BUTTONGROUP = {
   group2: ['7', '8', '9', 'x'],
   group3: ['4', '5', '6', '-'],
   group4: ['1', '2', '3', '+'],
-  group5: ['0', '.'],
+  group5: ['0', '.', '=', '+'],
 };
 
 const ButtonPanel = () => {
@@ -33,7 +33,6 @@ const ButtonPanel = () => {
         <div className="row">{renderButtons(group3)}</div>
         <div className="row">{renderButtons(group4)}</div>
         <div className="row">{renderButtons(group5)}</div>
-        <Button name="=" />
       </div>
     </>
   );
