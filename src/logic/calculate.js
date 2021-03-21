@@ -1,22 +1,26 @@
-/* eslint-disable consistent-return */
 import operate from './operate';
 
-const calculate = ({ data, buttonName }) => {
+const buttonOperations = (button, data) => {
   let { total, next, operation } = data;
-
-  switch (buttonName) {
+  switch (button) {
     case 'AC':
       total = null;
       next = null;
       operation = null;
       break;
     case '+/-':
-      if (next) next *= -1;
-      else total *= -1;
+      if (next) {
+        next *= -1;
+      } else {
+        total *= -1;
+      }
       break;
     case '%':
-      if (!next) total /= 100;
-      else next /= 100;
+      if (!next) {
+        total /= 100;
+      } else {
+        next /= 100;
+      }
       break;
     case '0':
     case '1':
@@ -30,58 +34,72 @@ const calculate = ({ data, buttonName }) => {
     case '9':
       if (!operation) {
         if (!total) {
-          total = buttonName;
+          total = button;
         } else if (typeof total === 'number') {
-          total = buttonName;
+          total = button;
         } else {
-          total += buttonName;
+          total += button;
         }
       } else if (!next) {
-        next = buttonName;
+        next = button;
       } else {
-        next += buttonName;
+        next += button;
       }
       break;
-
     case '.':
       if (!total) total = '0.';
       if (!operation && !total.includes('.')) {
         total += '.';
-      } else if (!operation && !next.includes('.')) {
+      } else if (operation && !next.includes('.')) {
         next += '.';
       }
       break;
-
     case '+':
     case '-':
-    case 'x':
     case '/':
-      if (!total) total = 0;
+    case 'x':
+      if (!total) {
+        total = 0;
+      }
+
       if (total && next && operation) {
         total = operate(total, next, operation);
         next = null;
         operation = null;
       }
-      operation = buttonName;
+      operation = button;
       break;
 
     case '=':
-      if (!total && !next) return 0;
-      if (total && !next) return 0;
-      if (!operation) operate(total, next, operation);
-      if (total && next) {
-        operate(total, next, operation);
+      if (!total && !next) {
+        return '0';
+      }
+
+      if (total && !next) {
+        return total;
+      }
+
+      if (!operation) {
+        total = operate(total, next, operation);
         next = null;
-        operation = buttonName;
+        operation = null;
+      }
+
+      if (total && next) {
+        total = operate(total, next, operation);
+        next = null;
+        operation = button;
       }
       break;
-
     default:
-      total = 'ERROR';
+      total = 'Error';
       next = null;
       operation = null;
       break;
   }
+  return { total, next, operation };
 };
+
+const calculate = (data, buttonName) => buttonOperations(buttonName, data);
 
 export default calculate;
