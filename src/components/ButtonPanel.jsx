@@ -18,6 +18,7 @@ const ButtonPanel = ({ clickHandler }) => {
   const renderButtons = group => group.map(name => (
     <Button
       key={name}
+      className="btn"
       name={name}
       handlerClick={handleClick1}
     />
