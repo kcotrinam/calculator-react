@@ -20,10 +20,12 @@ const App = () => {
   const { next, total } = state;
   return (
     <>
-      <h1 className="title">Calculator App</h1>
-      <div className="calculator-container">
-        <Display result={(next && next.toString()) || (total && total.toString())} />
-        <ButtonPanel clickHandler={data => handleClick(data)} />
+      <div className="wrapper">
+        <h1 className="title">Calculator App</h1>
+        <div className="calculator-container">
+          <Display result={(next && next.toString()) || (total && total.toString())} />
+          <ButtonPanel clickHandler={data => handleClick(data)} />
+        </div>
       </div>
     </>
   );
