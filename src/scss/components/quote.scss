@@ -2,6 +2,19 @@
 	display: grid;
 	grid-template-rows: auto 1fr;
 	min-height: 100vh;
+	position: relative;
+}
+
+body {
+	position: relative;
+	background: url('../../assets/bg.jpg');
+	&::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		background-color: hsla(0, 0, 0, 0.85);
+		position: absolute;
+	}
 }
 
 .quote-container {
@@ -12,5 +25,6 @@
 
 	& > .home-quote {
 		font-size: 1.5rem;
+		color: #fff;
 	}
 }
