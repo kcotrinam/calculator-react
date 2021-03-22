@@ -1,26 +1,26 @@
 .nav {
-	display: flex;
-	justify-content: space-between;
-	background-color: peru;
-	padding: 1rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: peru;
+  padding: 1rem 2.5rem;
 
-	& > .nav-title {
-		font-size: 3rem;
-		color: #fff;
-	}
+  & > .nav-title {
+    font-size: 3rem;
+    color: #fff;
+  }
 }
 
 .nav-list {
-	list-style: none;
-	display: flex;
-	align-items: center;
+  list-style: none;
+  display: flex;
+  align-items: center;
 
-	& li {
-		margin: 0 1rem;
-	}
+  & li {
+    margin: 0 1rem;
+  }
 
-	& a {
-		color: #fff;
-		font-size: 1.5rem;
-	}
+  & a {
+    color: #fff;
+    font-size: 1.5rem;
+  }
 }

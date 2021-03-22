@@ -1,24 +1,24 @@
 .btn {
-	background-color: orange;
-	color: #fff;
-	font-weight: bolder;
-	font-size: 2rem;
-	cursor: pointer;
+  background-color: orange;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 2rem;
+  cursor: pointer;
 
-	&-zero {
-		grid-column: span 2;
-	}
+  &-zero {
+    grid-column: span 2;
+  }
 
-	&-number {
-		background-color: #d6d6d6;
-		color: #000;
-	}
+  &-number {
+    background-color: #d6d6d6;
+    color: #000;
+  }
 
-	&-equal {
-		background-color: #4bb543;
-	}
+  &-equal {
+    background-color: #4bb543;
+  }
 
-	&-danger {
-		background-color: #ff0000;
-	}
+  &-danger {
+    background-color: #f00;
+  }
 }
