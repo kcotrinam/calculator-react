@@ -6,9 +6,11 @@ const Links = ({ name }) => {
   const route = lowerCasedName === 'home' ? '/' : `/${lowerCasedName}`;
   return (
     <>
-      <Link to={route}>
-        <li>{name}</li>
-      </Link>
+      <li>
+        <Link to={route}>
+          {name}
+        </Link>
+      </li>
     </>
   );
 };

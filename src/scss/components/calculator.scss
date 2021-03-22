@@ -1,9 +1,11 @@
-#root {
+.wrapper {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	padding: 0.75rem;
+	margin-top: 0.5rem;
 }
 
-.wrapper {
+.right {
 	width: 700px;
 	grid-column-start: 2;
 }

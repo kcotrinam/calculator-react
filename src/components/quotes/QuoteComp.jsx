@@ -3,7 +3,9 @@ import Quote from '../shared/Quote';
 const QUOTE = 'Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding. –William Paul Thurston';
 
 const QuoteComp = () => (
-  <Quote quote={QUOTE} />
+  <div className="quote-container">
+    <Quote quote={QUOTE} />
+  </div>
 );
 
 export default QuoteComp;
