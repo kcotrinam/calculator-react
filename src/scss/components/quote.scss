@@ -1,0 +1,16 @@
+#root {
+	display: grid;
+	grid-template-rows: auto 1fr;
+	min-height: 100vh;
+}
+
+.quote-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.2rem 1.5rem;
+
+	& > .home-quote {
+		font-size: 1.5rem;
+	}
+}
