@@ -1,4 +1,4 @@
-import Title from './Title';
+import Title from '../shared/Title';
 import Links from './Links';
 
 const Navbar = () => (
