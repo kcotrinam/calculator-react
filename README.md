@@ -4,15 +4,16 @@
 
 > This is a basic calculator built with React.
 
-![screenshot]()
+![screenshot](./docs/screenshot.png)
 
 ## :red_circle: Live Demo:
 
-[Live Demo Link](https://calculators-react.herokuapp.com/)
+[Live Demo Link](https://magic-math.herokuapp.com/)
 
 ## :hammer: Built with
 
 - React
+- React routes
 - SCSS
 - JavaScript
 - Linters
@@ -30,9 +31,9 @@ To get a local copy up and running follow these simple steps:
 
 👤 **Kenvin Cotrina**
 
-- GitHub: [kcotrinam](https://github.com/kcotrinam) 
+- GitHub: [kcotrinam](https://github.com/kcotrinam)
 - Twitter: [@kcotrinam_dev](https://twitter.com/kcotrinam_dev)
-- LinkedIn: [KevinCotrina](https://www.linkedin.com/in/kevincotrina/ )
+- LinkedIn: [KevinCotrina](https://www.linkedin.com/in/kevincotrina/)
 
 ## 🤝 :raised_hand: :raised_hand: Contributions
 
@@ -50,6 +51,6 @@ Give a ⭐️ if you like this project!
 - [Odin Project](https://www.theodinproject.com/)
 - [Heroku](https://dashboard.heroku.com/)
 
- ## 📝 License
+## 📝 License
 
 This project is [MIT](LICENSE) licensed.
