@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
+import '../scss/components/panelButtons.scss';
 
 const BUTTONGROUP = {
   group1: ['AC', '+/-', '%', '/'],
@@ -18,7 +19,6 @@ const ButtonPanel = ({ clickHandler }) => {
   const renderButtons = group => group.map(name => (
     <Button
       key={name}
-      className="btn"
       name={name}
       handlerClick={handleClick1}
     />
