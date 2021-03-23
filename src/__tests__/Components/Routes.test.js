@@ -12,7 +12,7 @@ test('displays heading', () => {
   render(<Routes />);
   const title = screen.getByText('Math Magicians');
   expect(title).toBeInTheDocument();
-})
+});
 
 test('Has link to calculator', () => {
   render(<Routes />);

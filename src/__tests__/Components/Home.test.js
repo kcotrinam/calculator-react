@@ -9,7 +9,7 @@ test('Renders correctly', () => {
 });
 
 test('displays the header', () => {
-  render(<Home title="Welcome to page!"/>);
+  render(<Home title="Welcome to page!" />);
   const header = screen.getByText('Welcome to page!');
   expect(header).toBeInTheDocument();
 });
