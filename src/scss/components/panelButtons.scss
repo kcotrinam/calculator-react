@@ -1,0 +1,13 @@
+.panel-button {
+  background-color: peru;
+  width: 100%;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100px;
+  margin-top: 0.5rem;
+  column-gap: 0.5rem;
+  padding: 0.5rem;
+}

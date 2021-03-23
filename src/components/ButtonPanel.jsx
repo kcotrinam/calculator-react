@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
+import '../scss/components/panelButtons.scss';
 
 const BUTTONGROUP = {
   group1: ['AC', '+/-', '%', '/'],
   group2: ['7', '8', '9', 'x'],
   group3: ['4', '5', '6', '-'],
   group4: ['1', '2', '3', '+'],
-  group5: ['0', '.', '=', '+'],
+  group5: ['0', '.', '='],
 };
 
 const ButtonPanel = ({ clickHandler }) => {
